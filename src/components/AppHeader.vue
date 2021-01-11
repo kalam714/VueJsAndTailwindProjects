@@ -12,7 +12,10 @@ export default {
         return{
             links:[
                 {title:'Mcu Heros', to:'/Marvel-Heros'},
-                {title:'Calendar', to:'/vue-calendar'}
+                {title:'Calendar', to:'/vue-calendar'},
+                {title:'Markdown', to:'/markdown'},
+                {title:'Slider', to:'/slider'},
+
             ]
         }
     }
