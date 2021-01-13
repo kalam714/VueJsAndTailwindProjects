@@ -3,7 +3,7 @@
       <h1 class="w-full text-center text-2xl my-3 font-bold">Markdown App</h1>
       <section class="flex m-auto w-10/12 h-screen">
           <article class="w-1/2 border">
-          <textarea class="w-full h-screen" :value="text" @input="update"></textarea>
+          <textarea class="w-full h-screen" :value="text" @input="update" ref="mrdRef"></textarea>
           </article>
           <article class="w-1/2 border bg-gray-200" v-html="Text"></article>
       </section>
@@ -40,6 +40,10 @@ export default {
                clearTimeout(this.timeOut)
                 this.timeOut=setTimeout(func,wait)
         }
+    },
+
+    mounted(){
+        this.$refs.mrdRef.focus()
     }
 
 

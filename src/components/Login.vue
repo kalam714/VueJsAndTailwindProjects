@@ -24,6 +24,12 @@
                       </button>
               </div>
               </form>
+              <section class="text-center my-4">
+                  <button class="px-2 border rounded bg-green-600 text-white" @click="signWithGoogle">Sign With Google</button>
+              </section>
+               <section class="text-center my-4">
+                  <button class="px-2 border rounded bg-green-600 text-white" @click="signWithFacebook">Sign With Facebook</button>
+              </section>
 
           </div>
           </div>
@@ -64,7 +70,21 @@ export default {
         },
         closeModal(){
             this.$emit('close-modal')
+        },
+        signWithGoogle(){
+            var provider = new firebase.auth.GoogleAuthProvider()
+            firebase.auth().signInWithPopup(provider).then(()=>{
+                this.closeModal()
+            })
+        },
+        signWithFacebook(){
+            var provider = new firebase.auth.FacebookAuthProvider();
+               firebase.auth().signInWithPopup(provider).then(()=>{
+                this.closeModal()
+            })
+
         }
+        
     }
   
 }

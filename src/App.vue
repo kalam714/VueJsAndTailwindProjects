@@ -1,5 +1,5 @@
 <template>
-<AppHeader @open-modal="isOpen = true" />
+<AppHeader :isSignedIn ='isSignedIn'  @open-modal="isOpen = true" />
   <div class="m-auto">
 
     <router-view></router-view>
