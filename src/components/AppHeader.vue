@@ -1,13 +1,18 @@
 <template>
 <nav class="w-full bg-gradient-to-r from-green-800 to-green-600 text-white px-2 py-1">
     <router-link v-for="link in links" :key="link.to" :to="link.to" class="mx-2">{{link.title}}</router-link>
+    <button @click="$emit('open-modal')">Login</button>
+     <button class="p-2" @click="logout">Logout</button>
    
 </nav>
+
   
 </template>
 
 <script>
+   import firebase from '../utilities/firebase'
 export default {
+ 
     data(){
         return{
             links:[
@@ -17,6 +22,11 @@ export default {
                 {title:'Slider', to:'/slider'},
 
             ]
+        }
+    },
+    methods:{
+        logout(){
+            firebase.auth().signOut()
         }
     }
 
