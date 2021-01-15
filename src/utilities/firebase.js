@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/auth";
+import 'firebase/database'
 var firebaseConfig = {
     apiKey: "AIzaSyCMhH1CpUNpLZQGEVQ0B5SoP01R-PaZimU",
     authDomain: "vue3-project-430d0.firebaseapp.com",
@@ -11,5 +12,7 @@ var firebaseConfig = {
 
 
   firebase.initializeApp(firebaseConfig);
+  const db = firebase.database()
+  export const chatsRef = db.ref('chats')
 
   export default firebase;

@@ -5,6 +5,9 @@ import Calendar from './components/Calendar'
 import Markdown from './components/Markdown'
 import Slider from './components/Slider'
 import Calculator from './components/Calculator'
+import Modal from './components/Modal'
+import Chat from './components/Chat'
+
 
 
 
@@ -15,7 +18,9 @@ const routes = [
     {path:'/vue-calendar',component:Calendar},
     {path: '/markdown',component:Markdown}, 
     {path:'/slider',component:Slider},
-    {path:'/calculator',component:Calculator}
+    {path:'/calculator',component:Calculator},
+    {path:'/modal',component:Modal},
+    {path:'/chat',component:Chat}
 ]
 const router =createRouter({
     routes,
