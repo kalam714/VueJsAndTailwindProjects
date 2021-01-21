@@ -12,7 +12,7 @@
 <script>
    import firebase from '../utilities/firebase'
 export default {
-    props:['isSignedIn'],
+ 
  
     data(){
         return{
@@ -26,8 +26,14 @@ export default {
                 {title:'Chat',to:'/chat'},
 
 
-            ]
+            ],
+           
         }
+    },
+    computed:{
+       isSignedIn(){
+           return this.$store.state.isSignedIn
+       }
     },
     methods:{
         logout(){
