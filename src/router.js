@@ -9,7 +9,7 @@ import Modal from './components/Modal'
 import Chat from './components/Chat'
 import store from './store/index'
 
-
+import UserCrud from './components/UserCrud'
 
 
 
@@ -21,6 +21,7 @@ const routes = [
     {path:'/slider',component:Slider},
     {path:'/calculator',component:Calculator},
     {path:'/modal',component:Modal},
+    {path:'/user-crud',component:UserCrud},
     {path:'/chat',
     component:Chat,
     meta:{middleware:'auth'}
