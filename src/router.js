@@ -8,6 +8,7 @@ import Calculator from './components/Calculator'
 import Modal from './components/Modal'
 import Chat from './components/Chat'
 import store from './store/index'
+import Tensorflow from './components/Tensorflow'
 
 import UserCrud from './components/UserCrud'
 
@@ -22,6 +23,7 @@ const routes = [
     {path:'/calculator',component:Calculator},
     {path:'/modal',component:Modal},
     {path:'/user-crud',component:UserCrud},
+    {path:'/tensorflow',component:Tensorflow},
     {path:'/chat',
     component:Chat,
     meta:{middleware:'auth'}

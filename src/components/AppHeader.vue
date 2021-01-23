@@ -25,6 +25,7 @@ export default {
                 {title:'Modal', to:'/modal'},
                 {title:'Chat',to:'/chat'},
                 {title:'UserCrud',to:'/user-crud'},
+                {title:'Tensorflow',to:'/tensorflow'},
 
             ],
            
